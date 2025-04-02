@@ -19,7 +19,7 @@ It is publicly available to help **Flutter beginners, enthusiasts, and developer
 
 | 🖼️ Container Preview  | 📱 Widget Preview  |
 |--------------|----------------|
-| <img src="widgets/ListTile/list_tile_demo.gif" alt="ListTile Demo" height="300"> | <img src="widgets/Stack/stack_demo.png" alt="Stack Demo" height="300"> |
+| <img src="https://github.com/Thogaruchesti-hemanth/Flutter-Widget-Explorer/blob/main/assets/outputs/container_widget_output.png" alt="Container Widget" height="300"> | <img src="widgets/Stack/stack_demo.png" alt="Stack Demo" height="300"> |
 | <img src="widgets/GridView/gridview_demo.gif" alt="GridView Demo" height="300"> |  |
 
 *(More will be added as exploration progresses!)*
@@ -50,8 +50,8 @@ Want to contribute? Awesome! Here’s how you can help:
 If you find this repository useful, please consider giving it a **⭐ Star** on GitHub. Your support motivates me to explore more widgets and share knowledge with the community! 💙
 
 ---
-**Author:** [Your Name](https://github.com/yourusername)  
-📧 Contact: your.email@example.com
+**Author:** [Thogaruchesti Hemanth](https://github.com/thogaruchesti-hemanth)  
+📧 Contact: saihemanth225@gmail.com
 
 Happy Coding! 🚀
 
