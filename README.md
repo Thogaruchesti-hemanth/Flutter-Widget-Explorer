@@ -17,9 +17,9 @@ It is publicly available to help **Flutter beginners, enthusiasts, and developer
 
 ## 📸 Results
 
-| 🖼️ Container Preview  | 📱 Widget Preview  |
+| 🖼️ Container Preview  | 🖼️ Text Preview  |
 |--------------|----------------|
-| <img src="https://github.com/Thogaruchesti-hemanth/Flutter-Widget-Explorer/blob/main/assets/outputs/container_widget_output.png" alt="Container Widget" height="300"> | <img src="widgets/Stack/stack_demo.png" alt="Stack Demo" height="300"> |
+| <img src="https://github.com/Thogaruchesti-hemanth/Flutter-Widget-Explorer/blob/main/assets/outputs/container_widget_output.png" alt="Container Widget" height="300"> | <img src="https://github.com/Thogaruchesti-hemanth/Flutter-Widget-Explorer/blob/main/assets/outputs/text_widget_output.png" alt="Stack Demo" height="300"> |
 | <img src="widgets/GridView/gridview_demo.gif" alt="GridView Demo" height="300"> |  |
 
 *(More will be added as exploration progresses!)*
