@@ -12,13 +12,15 @@ It is publicly available to help **Flutter beginners, enthusiasts, and developer
 
 ## 🏗 Widgets Explored So Far
 - ✅ Container
+- ✅ Text
+- ✅ Types of Buttons
 
 > The list is continuously growing as new widgets are explored! Stay tuned! 🚀
 
 ## 📸 Results
 
-| 🖼️ Container Preview  | 🖼️ Text Preview  |
-|--------------|----------------|
+| 🖼️ Container Preview  | 🖼️ Text Preview  |🖼️ Types of Button| 
+|--------------|----------------|----------------|
 | <img src="https://github.com/Thogaruchesti-hemanth/Flutter-Widget-Explorer/blob/main/assets/outputs/container_widget_output.png" alt="Container Widget" height="300"> | <img src="https://github.com/Thogaruchesti-hemanth/Flutter-Widget-Explorer/blob/main/assets/outputs/text_widget_output.png" alt="Stack Demo" height="300"> |
 | <img src="widgets/GridView/gridview_demo.gif" alt="GridView Demo" height="300"> |  |
 
