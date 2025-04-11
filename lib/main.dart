@@ -16,7 +16,9 @@ import 'GridViewWidget.dart';
 import 'ListViewWidget.dart';
 import 'TextInputWidget.dart';
 import 'TextWidget.dart';
-import 'material_app/material_app_widget.dart';
+import 'app_bar.dart';
+import 'floating_action_button.dart';
+import 'material_app_widget.dart';
 
 void main() {
   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: HomePage()));
@@ -25,8 +27,11 @@ void main() {
 List<Widget> widgetList = [
   ContainerWidget(),
   TextWidget(),
+  Typesofbuttons(),
   AddImage(),
   MaterialAppWidget(),
+  AppBarExplorer(),
+  FloatingActionButtonWidget(),
 ];
 
 class HomePage extends StatefulWidget {
