@@ -23,18 +23,25 @@ This repo breaks that learning curve with:
 
 Flutter widgets are organized into categories for easier exploration:
 
-| Category           | Description |
-|--------------------|-------------|
-| 🧱 **Basic**        | Fundamental widgets like `Container`, `Text`, `Row`, `Column`, etc. |
-| 📦 **Layout**       | Organize child widgets using `Stack`, `Wrap`, `GridView`, etc. |
-| 💡 **Input**        | Widgets for user input like `TextField`, `Checkbox`, `Radio`, etc. |
-| 🧭 **Navigation**   | Routing and navigation: `Drawer`, `BottomNavigationBar`, `Navigator` |
-| 🎨 **Styling**      | Style & theming: `TextStyle`, `Theme`, `Padding`, etc. |
-| 🎬 **Animation**    | Motion widgets like `AnimatedContainer`, `Hero`, etc. |
-| 💬 **Dialogs**      | Popups: `AlertDialog`, `SnackBar`, `BottomSheet`, etc. |
-| 🖼️ **Media**        | Show images and icons: `Image`, `Icon`, etc. |
-| 🍏 **Cupertino**    | iOS-specific widgets |
-| ⚙️ **Advanced**     | Async and custom: `FutureBuilder`, `StreamBuilder`, `CustomPaint` |
+| Category                      | Description                                                                                                                                 |
+|------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| 🧱 **Basic Widgets**           | Fundamental building blocks like `Text`, `RichText`, `Container`, `Row`, `Column`, `Center`, `Padding`, `Align`, `SizedBox`, `Expanded`, `Flexible`, `Spacer`, `Stack`, `Wrap`. |
+| 🎨 **Styling and Theming**     | Widgets to apply styles and themes like `Theme`, `ThemeData`, `TextStyle`, `IconTheme`, `DefaultTextStyle`, `DecoratedBox`, `BoxDecoration`, `ClipRRect`, `Opacity`, `Transform`, `FittedBox`. |
+| 🖱️ **Input and Forms**         | Input-related widgets like `TextField`, `Form`, `FormField`, `TextFormField`, `Checkbox`, `Radio`, `Switch`, `Slider`, `DropdownButton`, `DatePicker`, `TimePicker`, `CheckboxListTile`, `RadioListTile`, `ListTile`, `ExpansionTile`. |
+| 🧭 **Navigation and Routing**  | Navigation and routing components like `Navigator`, `MaterialPageRoute`, `PageView`, `Drawer`, `BottomNavigationBar`, `TabBar`, `TabBarView`, `AppBar`, `Scaffold`, `BottomSheet`, `WillPopScope`. |
+| 📦 **Layout Widgets**          | For structuring UI: `Column`, `Row`, `Stack`, `Wrap`, `GridView`, `ListView`, `Table`, `CustomScrollView`, `SingleChildScrollView`, `LayoutBuilder`, `ConstrainedBox`, `AspectRatio`, `FractionallySizedBox`, `IntrinsicHeight`, `IntrinsicWidth`. |
+| 🧩 **Interactive Widgets**     | Handle gestures and interactions: `GestureDetector`, `InkWell`, `InkResponse`, `Dismissible`, `Draggable`, `DragTarget`, `LongPressDraggable`, `InteractiveViewer`. |
+| 🖼️ **Image and Media**         | Media widgets like `Image`, `Image.asset`, `Image.network`, `FadeInImage`, `CircleAvatar`, `Icon`, `FlutterLogo`, `VideoPlayer`, `CachedNetworkImage`. |
+| 📜 **Scrolling Widgets**       | Scrollable content: `ListView`, `GridView`, `SingleChildScrollView`, `PageView`, `NestedScrollView`, `Scrollbar`, `CustomScrollView`, `ScrollController`. |
+| 🛠️ **Utility Widgets**         | Helpers and system-aware widgets: `FutureBuilder`, `StreamBuilder`, `AnimatedBuilder`, `Builder`, `LayoutBuilder`, `MediaQuery`, `SafeArea`, `RepaintBoundary`. |
+| 💬 **Dialogs & Overlays**      | Popup/modals/alerts like `AlertDialog`, `SimpleDialog`, `BottomSheet`, `SnackBar`, `Dialog`, `showDialog`, `showModalBottomSheet`, `showDatePicker`, `showTimePicker`. |
+| 🎯 **Buttons**                 | Buttons like `ElevatedButton`, `TextButton`, `OutlinedButton`, `IconButton`, `FloatingActionButton`, `DropdownButton`, `PopupMenuButton`, `CloseButton`, `BackButton`. |
+| 🧪 **Animation and Motion**    | Animated widgets like `AnimatedContainer`, `AnimatedOpacity`, `AnimatedCrossFade`, `Hero`, `FadeTransition`, `ScaleTransition`, `SlideTransition`, `RotationTransition`, `AnimatedSwitcher`, `AnimatedBuilder`. |
+| 🧑‍🎨 **Material Components**     | Material Design widgets: `Scaffold`, `AppBar`, `MaterialApp`, `MaterialButton`, `Drawer`, `FloatingActionButton`, `Card`, `Chip`, `SnackBar`, `BottomAppBar`, `ExpansionTile`, `ListTile`. |
+| 🍏 **Cupertino Widgets**       | iOS-style widgets like `CupertinoApp`, `CupertinoButton`, `CupertinoNavigationBar`, `CupertinoPageScaffold`, `CupertinoAlertDialog`, `CupertinoPicker`, `CupertinoSlider`, `CupertinoSwitch`, `CupertinoTabBar`. |
+| 🧩 **Custom Paint & Drawing**  | Advanced drawing: `CustomPaint`, `CustomPainter`, `Canvas`, `Paint`. |
+| 🧪 **State Management Helpers**| State widgets: `StatefulWidget`, `StatelessWidget`, `InheritedWidget`, `Provider`, `Consumer`, `ChangeNotifierProvider`. |
+
 
 ---
 
