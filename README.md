@@ -39,14 +39,27 @@ Flutter widgets are organized into categories for easier exploration:
 ---
 
 ## ✅ Widgets Explored So Far
-
-| Widget Name        | Preview | Description |
-|--------------------|---------|-------------|
-| `Container`        | <div align="center"><img  src="assets/outputs/container_widget_output.png" alt="Container Widget" width="150" height="300"></div> | The most commonly used layout widget for styling, sizing, and positioning | [View Code](lib/widgets/container_example.dart) |
-| `Text`             | ![Text](assets/outputs/text_widget_output.png) | Display styled text on screen with various configurations | [View Code](lib/widgets/text_example.dart) |
-| `Types of Buttons` | ![Buttons](assets/outputs/types_of_buttons_output.png) | All major Flutter buttons like `ElevatedButton`, `TextButton`, `OutlinedButton`, `IconButton`, `FloatingActionButton` | [View Code](lib/widgets/buttons_example.dart) |
-
+|     Container      |    Text            |        Buttons     |
+|--------------------|--------------------|--------------------|
+| <div align="center"><img src="assets/outputs/container_widget_output.png" alt="Container Widget" width="150" height="300"></div> | <div align="center"><img src="assets/outputs/text_widget_output.png" alt="Text Widget" width="150" height="300"></div> | <div align="center"><img src="assets/outputs/types_of_buttons_output.png" alt="Buttons" width="150" height="300"></div> |
 > More widgets are added regularly. Stay tuned! 🚀
+
+---
+## 📦 Widget Details
+
+### 🧱 Container Widget
+
+The `Container` widget is a **box model** used to **style**, **position**, and **size** its child. It’s one of the most commonly used widgets in Flutter for layout building.
+
+#### 🔧 Common Attributes:
+- `width`, `height` – Define the size.
+- `padding`, `margin` – Add spacing.
+- `alignment` – Position the child inside the container.
+- `color` – Set the background color.
+- `decoration` – Add borders, rounded corners, shadows, etc.
+- `child` – The widget nested inside the container.
+
+📌 **Use for**: Layout structuring, adding space or color to UI elements.
 
 ---
 
