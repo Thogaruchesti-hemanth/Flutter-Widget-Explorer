@@ -24,38 +24,93 @@ void main() {
   runApp(MaterialApp(debugShowCheckedModeBanner: false, home: HomePage()));
 }
 
-List<Widget> widgetList = [
-  ContainerWidget(),
-  TextWidget(),
-  Typesofbuttons(),
-  AddImage(),
-  MaterialAppWidget(),
-  AppBarExplorer(),
-  FloatingActionButtonWidget(),
-];
-
 class HomePage extends StatefulWidget {
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
+final Map<String, List<Widget>> widgetGroups = {
+  'Basic Widgets': [TextWidget(), Row(), Column()],
+  'Styling and Theming': [TextField()],
+  'Input and Forms': [Container(), Row(), Column()],
+  'Navigation and Routing': [TextField()],
+  'Layout Widgets': [TextField()],
+  'Interactive Widgets': [TextField()],
+  'Image and Media': [TextField()],
+  '': [Image.asset(''), Icon(Icons.star), Text('Example')],
+};
+
 class _HomePageState extends State<HomePage> {
   Widget _currentWidget = ContainerWidget();
-  int _selectedIndex = 0;
 
-  void _onMenuItemSelected(int index) {
-    setState(() {
-      _currentWidget = widgetList[index];
-      _selectedIndex = index;
+  // State for expanded/collapsed groups
+  Map<String, bool> expandedState = {};
+
+  @override
+  void initState() {
+    super.initState();
+    // Flatten the grouped widgets into a single list
+    widgetGroups.forEach((key, widgets) {
+      expandedState[key] = false;
     });
   }
 
   @override
   Widget build(BuildContext context) {
+    List<Widget> drawerItems = [];
+
+    // Build the drawer sections with widgets
+    widgetGroups.forEach((groupTitle, widgets) {
+      drawerItems.add(
+        ExpansionTile(
+          title: Text(groupTitle),
+          initiallyExpanded: expandedState[groupTitle] ?? false,
+          onExpansionChanged: (expanded) {
+            setState(() {
+              expandedState[groupTitle] = expanded;
+            });
+          },
+          children:
+              widgets.map((widget) {
+                return ListTile(
+                  title: Text(widget.runtimeType.toString()),
+                  leading: Icon(Icons.widgets),
+                  onTap: () {
+                    setState(() {
+                      _currentWidget = widget;
+                    });
+                    Navigator.pop(context);
+                  },
+                );
+              }).toList(),
+        ),
+      );
+    });
+
+    // Add static options
+    drawerItems.addAll([
+      ListTile(
+        title: Text('Settings'),
+        leading: Icon(Icons.settings),
+        onTap: () => Navigator.pop(context),
+      ),
+      ListTile(
+        title: Text('About'),
+        leading: Icon(Icons.info),
+        onTap: () => Navigator.pop(context),
+      ),
+    ]);
+
     return Scaffold(
-      appBar: AppBar(title: Text('Flutter Widget Explorer')),
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100.0),
+        child: AppBar(
+          title: Text('Flutter Widget Explorer'),
+          centerTitle: true,
+        ),
+      ),
       drawer: Drawer(
-        child: Column(
+        child: ListView(
           children: [
             // Drawer Header with user info (or logo)
             UserAccountsDrawerHeader(
@@ -66,47 +121,13 @@ class _HomePageState extends State<HomePage> {
               ),
               decoration: BoxDecoration(color: Colors.black87),
             ),
-            // Menu Items with Icons and Sections
-            Expanded(
-              child: ListView(
-                padding: EdgeInsets.zero,
-                children: [
-                  for (int i = 0; i < widgetList.length; i++)
-                    ListTile(
-                      title: Text(widgetList[i].runtimeType.toString()),
-                      leading: Icon(Icons.widgets),
-                      selected: _selectedIndex == i,
-                      onTap: () {
-                        _onMenuItemSelected(i);
-                        Navigator.pop(context);
-                      },
-                    ),
-                  Divider(),
-                  ListTile(
-                    title: Text('Settings'),
-                    leading: Icon(Icons.settings),
-                    selected: _selectedIndex == widgetList.length,
-                    onTap: () {
-                      // Navigate to settings (you can add the functionality)
-                      Navigator.pop(context);
-                    },
-                  ),
-                  ListTile(
-                    title: Text('About'),
-                    leading: Icon(Icons.info),
-                    selected: _selectedIndex == widgetList.length + 1,
-                    onTap: () {
-                      // Navigate to about (you can add the functionality)
-                      Navigator.pop(context);
-                    },
-                  ),
-                ],
-              ),
-            ),
+            ...drawerItems,
           ],
         ),
       ),
-      body: _currentWidget,
+      body:
+          _currentWidget ??
+          Center(child: Text("select a widget from the drawer")),
     );
   }
 }
