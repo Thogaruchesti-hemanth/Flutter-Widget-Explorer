@@ -52,24 +52,14 @@ Flutter widgets are organized into categories for easier exploration:
 > More widgets are added regularly. Stay tuned! 🚀
 
 ---
-## 📦 Widget Details
+## 📘 Learn More About Flutter Widgets
 
-### 🧱 Container Widget
+Want to explore Flutter widgets in detail with structured guides and practical examples?  
+Check out my blog where I break down each widget with visuals and real use cases.
 
-The `Container` widget is a **box model** used to **style**, **position**, and **size** its child. It’s one of the most commonly used widgets in Flutter for layout building.
-
-#### 🔧 Common Attributes:
-- `width`, `height` – Define the size.
-- `padding`, `margin` – Add spacing.
-- `alignment` – Position the child inside the container.
-- `color` – Set the background color.
-- `decoration` – Add borders, rounded corners, shadows, etc.
-- `child` – The widget nested inside the container.
-
-📌 **Use for**: Layout structuring, adding space or color to UI elements.
+👉 [Visit My Flutter Widget Blog](https://yourflutterblog.blogspot.com)
 
 ---
-
 ## 🛠 How to Run the Code
 
 To run any widget demo on your local machine:
