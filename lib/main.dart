@@ -37,7 +37,10 @@ final Map<String, List<Widget>> widgetGroups = {
   'Layout Widgets': [TextField()],
   'Interactive Widgets': [TextField()],
   'Image and Media': [TextField()],
-  '': [Image.asset(''), Icon(Icons.star), Text('Example')],
+  'Scolling Widgets': [Image.asset(''), Icon(Icons.star), Text('Example')],
+  'Utility widgets': [Image.asset(''), Icon(Icons.star), Text('Example')],
+  'Dialogs Widgets': [Image.asset(''), Icon(Icons.star), Text('Example')],
+  'Buttons': [Image.asset(''), Icon(Icons.star), Text('Example')],
 };
 
 class _HomePageState extends State<HomePage> {
@@ -63,7 +66,10 @@ class _HomePageState extends State<HomePage> {
     widgetGroups.forEach((groupTitle, widgets) {
       drawerItems.add(
         ExpansionTile(
-          title: Text(groupTitle),
+          title: Text(
+            groupTitle,
+            style: TextStyle(fontWeight: FontWeight.w600, fontSize: 18),
+          ),
           initiallyExpanded: expandedState[groupTitle] ?? false,
           onExpansionChanged: (expanded) {
             setState(() {
@@ -73,8 +79,12 @@ class _HomePageState extends State<HomePage> {
           children:
               widgets.map((widget) {
                 return ListTile(
-                  title: Text(widget.runtimeType.toString()),
-                  leading: Icon(Icons.widgets),
+                  contentPadding: EdgeInsets.symmetric(horizontal: 20),
+                  title: Text(
+                    widget.runtimeType.toString(),
+                    style: TextStyle(fontSize: 16),
+                  ),
+                  leading: Icon(Icons.widgets_outlined, color: Colors.blueGrey),
                   onTap: () {
                     setState(() {
                       _currentWidget = widget;
@@ -109,25 +119,46 @@ class _HomePageState extends State<HomePage> {
           centerTitle: true,
         ),
       ),
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            // Drawer Header with user info (or logo)
-            UserAccountsDrawerHeader(
-              accountName: Text('Thogaruchesti Hemanth'),
-              accountEmail: Text('saihemanth225@gmail.com'),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: AssetImage('assets/images/sample_image.jpg'),
-              ),
-              decoration: BoxDecoration(color: Colors.black87),
+      drawer: ClipRRect(
+        borderRadius: BorderRadius.only(
+          topRight: Radius.circular(30),
+          bottomRight: Radius.circular(30),
+        ),
+        child: Drawer(
+          backgroundColor: Colors.grey[100],
+          child: MediaQuery.removePadding(
+            context: context,
+            removeTop: true,
+            child: ListView(
+              padding: EdgeInsets.zero,
+              children: [
+                // Drawer Header with user info (or logo)
+                UserAccountsDrawerHeader(
+                  accountName: Text(
+                    'Thogaruchesti Hemanth',
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  accountEmail: Text('saihemanth225@gmail.com'),
+                  currentAccountPicture: CircleAvatar(
+                    backgroundImage: AssetImage(
+                      'assets/images/sample_image.jpg',
+                    ),
+                  ),
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Colors.black87, Colors.grey[800]!],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
+                    ),
+                  ),
+                ),
+                ...drawerItems,
+              ],
             ),
-            ...drawerItems,
-          ],
+          ),
         ),
       ),
-      body:
-          _currentWidget ??
-          Center(child: Text("select a widget from the drawer")),
+      body: _currentWidget,
     );
   }
 }
